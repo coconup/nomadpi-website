@@ -44,11 +44,40 @@
                 width: 100%;
                 text-align: center;
             }
+
+            #videoContainer {
+                margin: 40px;
+            }
+
+            #video {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 57.25%; /* 16:9 aspect ratio */
+                height: 0;
+                overflow: hidden;
+                max-width: 50vw; /* Set maximum width to 60% of viewport width */
+                margin: 0 auto; /* Center the video */
+            }
+
+            #video iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
         </style>
     </head>
     <body>
         <div id="container">
             <div id="nomadPiLogo">nomadPi</div>
+            <div id="videoContainer">
+                <div id="video">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1wNc4X0X_4g?si=K_a-2ZIOSlrQ4kpZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
             <div id="codeSection">
                 <code>wget -q -O - "https://raw.githubusercontent.com/coconup/nomadpi/master/install.sh" | dos2unix | bash</code>
             </div>
